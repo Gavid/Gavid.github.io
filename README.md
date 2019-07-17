@@ -34,3 +34,5 @@
   * 一台电脑中，如何使 git 同时配置Github、Gitee等多种版本控制工具
   * 如何从Github上下载项目文件
   * 如何下载Github中存储库中的部分文件
+* [有关Linux的总结](https://github.com/Gavid/Gavid.github.io/tree/master/Linux)
+  * Vim文本编辑器的命令大全
