@@ -32,3 +32,5 @@
   * easyui 解决dialog窗口超出父窗口。导致不能拖动与关闭
 * [有关版本控制的总结](https://github.com/Gavid/Gavid.github.io/tree/master/Version_Control)
   * 一台电脑中，如何使 git 同时配置Github、Gitee等多种版本控制工具
+  * 如何从Github上下载项目文件
+  * 如何下载Github中存储库中的部分文件
