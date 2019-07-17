@@ -30,3 +30,5 @@
 * [有关EasyUI的总结](https://github.com/Gavid/Gavid.github.io/tree/master/EasyUI)
   * easyui datagrid表头样式设置
   * easyui 解决dialog窗口超出父窗口。导致不能拖动与关闭
+* [有关版本控制的总结](https://github.com/Gavid/Gavid.github.io/tree/master/Version_Control)
+  * 一台电脑中，如何使 git 同时配置Github、Gitee等多种版本控制工具
