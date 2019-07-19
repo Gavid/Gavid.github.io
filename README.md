@@ -36,3 +36,5 @@
   * 如何下载Github中存储库中的部分文件
 * [有关Linux的总结](https://github.com/Gavid/Gavid.github.io/tree/master/Linux)
   * Vim文本编辑器的命令大全
+* [有关JavaWeb的总结](https://github.com/Gavid/Gavid.github.io/tree/master/javaWeb)
+  * slf4 + logback日志组件的介绍，以及在javaWeb工程中的详细应用
