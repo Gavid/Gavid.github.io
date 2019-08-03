@@ -38,3 +38,7 @@
   * Vim文本编辑器的命令大全
 * [有关JavaWeb的总结](https://github.com/Gavid/Gavid.github.io/tree/master/javaWeb)
   * slf4 + logback日志组件的介绍，以及在javaWeb工程中的详细应用
+* [有关财务系统通用组件的总结](https://github.com/Gavid/Gavid.github.io/tree/master/%E8%B4%A2%E5%8A%A1%E7%B3%BB%E7%BB%9F%E9%80%9A%E7%94%A8%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3)
+  * CommonUtils的API文档
+  * 数字自定义格式化工具
+  * 条件查询组件的使用
