@@ -12,7 +12,7 @@
   * tensorflow 在windows下的安装步骤
   * 利用 tensorflow 实现多项式回归
   * 深度学习思维导图（基于深度学习框架）
-* [有关tensorflow 的总结](https://github.com/Gavid/Gavid.github.io/tree/master/deepLearning)
+* [有关深度学习的总结](https://github.com/Gavid/Gavid.github.io/tree/master/deepLearning)
   * 推荐系统——学习笔记
 * [有关python 的总结](https://github.com/Gavid/Gavid.github.io/tree/master/python)
   * Jupyter Notebook 的快捷键总结
