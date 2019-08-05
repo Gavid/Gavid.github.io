@@ -14,6 +14,7 @@
   * 深度学习思维导图（基于深度学习框架）
 * [有关深度学习的总结](https://github.com/Gavid/Gavid.github.io/tree/master/deepLearning)
   * 推荐系统——学习笔记
+  * Seq2Seq网络框架的学习笔记
 * [有关python 的总结](https://github.com/Gavid/Gavid.github.io/tree/master/python)
   * Jupyter Notebook 的快捷键总结
   * Python中 yield 的用法以及解释
@@ -38,6 +39,7 @@
   * 如何下载Github中存储库中的部分文件
 * [有关Linux的总结](https://github.com/Gavid/Gavid.github.io/tree/master/Linux)
   * Vim文本编辑器的命令大全
+  * Linux下，常用命令收集（包含查看系统硬件信息，系统版本，软件安装路径等）
   * Linux进程查询_任务后台运行
   * 服务器端Linux如何登录校园网
 * [有关JavaWeb的总结](https://github.com/Gavid/Gavid.github.io/tree/master/javaWeb)
