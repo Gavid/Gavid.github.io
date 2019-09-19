@@ -5,6 +5,7 @@
   * Docker的入门介绍
   * 图像处理相关方法以及概念详细总结介绍
   * uni-app 优秀的开发手机端应用的框架
+  * REST与RESTFul API最佳实践【转】
 * [软件架构设计的总结](https://github.com/Gavid/Gavid.github.io/tree/master/Software_Architecture)
   * 设计原则——做软件的必学课程
   * 设计模式——做软件的必学课程
