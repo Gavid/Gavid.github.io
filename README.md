@@ -6,6 +6,8 @@
   * 图像处理相关方法以及概念详细总结介绍
   * uni-app 优秀的开发手机端应用的框架
   * REST与RESTFul API最佳实践【转】
+* [有关论文的阅读记录](https://github.com/Gavid/Gavid.github.io/tree/master/Paper_Reading)
+  * GeoMAN论文阅读心得
 * [软件架构设计的总结](https://github.com/Gavid/Gavid.github.io/tree/master/Software_Architecture)
   * 设计原则——做软件的必学课程
   * 设计模式——做软件的必学课程
@@ -47,7 +49,10 @@
   * 服务器端Linux如何登录校园网
 * [有关JavaWeb的总结](https://github.com/Gavid/Gavid.github.io/tree/master/javaWeb)
   * slf4 + logback日志组件的介绍，以及在javaWeb工程中的详细应用
+  * IntelliJ idea常用快捷键
 * [有关财务系统通用组件的总结](https://github.com/Gavid/Gavid.github.io/tree/master/%E8%B4%A2%E5%8A%A1%E7%B3%BB%E7%BB%9F%E9%80%9A%E7%94%A8%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3)
   * CommonUtils的API文档
   * 数字自定义格式化工具
   * 条件查询组件的使用
+* [有关OCR研究的星路历程](https://github.com/Gavid/Gavid.github.io/tree/master/Research_Abouting)
+  * 1. pycharm 使用远程服务器的环境进行程序的编译，运行
