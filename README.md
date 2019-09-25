@@ -55,4 +55,5 @@
   * 数字自定义格式化工具
   * 条件查询组件的使用
 * [有关OCR研究的星路历程](https://github.com/Gavid/Gavid.github.io/tree/master/Research_Abouting)
-  * 1. pycharm 使用远程服务器的环境进行程序的编译，运行
+  * 1.pycharm 使用远程服务器的环境进行程序的编译，运行
+  * 2.通过Opencv将图片中指定位置用矩形框起来
