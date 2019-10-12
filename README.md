@@ -60,4 +60,4 @@
   * 3.字符图像预处理技术
   * 4.用于去除带有换行符的文本小工具（便于外文的翻译）
   * 相关论文阅读
-    * EAST An Efficient and Accurate Scene Text Detector高效准确的场景文本检测器论文翻译
+    * 【论文翻译】EAST An Efficient and Accurate Scene Text Detector高效准确的场景文本检测器
