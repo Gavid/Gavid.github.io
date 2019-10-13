@@ -59,5 +59,6 @@
   * 2.通过Opencv将图片中指定位置用矩形框起来
   * 3.字符图像预处理技术
   * 4.用于去除带有换行符的文本小工具（便于外文的翻译）
+  * 5.anaconda中创建虚拟环境（env），便于该环境为项目专用环境
   * 相关论文阅读
     * 【论文翻译】EAST An Efficient and Accurate Scene Text Detector高效准确的场景文本检测器
