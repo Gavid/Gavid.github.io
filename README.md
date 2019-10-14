@@ -16,6 +16,7 @@
   * tensorflow 在windows下的安装步骤
   * 利用 tensorflow 实现多项式回归
   * 深度学习思维导图（基于深度学习框架）
+  * Tensorflow教程：特别适合刚刚接触深度学习coding的小白
 * [有关深度学习的总结](https://github.com/Gavid/Gavid.github.io/tree/master/deepLearning)
   * 推荐系统——学习笔记
   * Seq2Seq网络框架的学习笔记
