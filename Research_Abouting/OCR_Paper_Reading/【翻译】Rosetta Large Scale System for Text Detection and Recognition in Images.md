@@ -12,7 +12,7 @@ typora-root-url: imgs
 
 ​		OCR 系统分为文本检测和文本识别两个阶段：基于 Faster-RCNN 模型，在文本检测阶段我们的系统能够检测出图像内包含文本的区域；采用基于全卷积网络的字符识别模型，在文本识别阶段我们的系统能够处理检测到的位置并识别出文本的内容。
 
-![wobxj6enSy](/wobxj6enSy.png)
+![wobxj6enSy](./wobxj6enSy.png)
 
 ### 文本检测模型
 
