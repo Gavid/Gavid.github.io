@@ -1,7 +1,3 @@
----
-typora-root-url: imgs
----
-
 # Rosetta: Large Scale System for Text Detection and Recognition in Images（大规模图像文本提取和识别系统）
 
 ### 摘要
@@ -12,7 +8,7 @@ typora-root-url: imgs
 
 ​		OCR 系统分为文本检测和文本识别两个阶段：基于 Faster-RCNN 模型，在文本检测阶段我们的系统能够检测出图像内包含文本的区域；采用基于全卷积网络的字符识别模型，在文本识别阶段我们的系统能够处理检测到的位置并识别出文本的内容。
 
-![wobxj6enSy](./wobxj6enSy.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20191128210949390.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjIzMDU1MA==,size_16,color_FFFFFF,t_70)
 
 ### 文本检测模型
 
@@ -27,7 +23,7 @@ typora-root-url: imgs
 ​		基于字符序列的编码模型 (CHAR)。该模型假设所有图像都具有相同的大小并且存在最大可识别字符数量 k。对于较长的单词，单词中只有 k 个字符能够被识别出。该 CHAR 模型的主体由一系列卷积结构组成，后接上 k 个独立的多类分类器，用于预测在每个位置上出现的字符。在训练期间，共同学习卷积体和 k 个不同的分类器。使用 k 个并行损失 (softmax + negative cross-entropy) 并提供合理的基线就能很容易地训练 CHAR 模型，但这有两个重大缺点：它无法正确识别长的单词串 (如 URL 地址)，分类器中大量的参数容易导致模型出现过拟合现象。
 ​		基于全卷积模型。我们将此模型称为 CTC，因为它使用 seq2seq 的CTC损失函数用于模型的训练，并输出一系列字符。CTC 模型的结构示意图如下图3所示，基于 ResNet-18 结构，在最后一层的卷积中预测输入字符在每个图像中最可能的位置。与其他工作不同的是，我们在此不使用显式循环神经网络结构 (如 LSTM 或 GRU) 或任何的注意力机制，而直接生成每个字符的概率。训练时，我们采用 CTC 损失函数，通过边缘化所有可能对齐的路径集合来计算给定标签的条件概率，这就能够使用动态编程进行有效地计算。 如图3所示，特征映射的每一列对应于图像每个位置所有字符的概率分布，CTC 能够找到它们之间的对齐预测，即可能包含重复的字符或空白字符和真实标签。
 
-![GkHqkSgSEz](/GkHqkSgSEz.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20191128211027859.png)
 
 ### Rosetta 系统
 
@@ -39,7 +35,7 @@ typora-root-url: imgs
 ​		所提取的文本信息及图像中文本的位置信息都被存储在 TAO 中，这是 Facebook 的一个分布式图形数据库 (图中的步骤6)。
 ​		诸如图片搜索等下游应用程序可以从 TAO 中访问所提取的图像文本信息 (图中的步骤7)。
 
-![](/mVh53g02pM.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20191128211050185.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjIzMDU1MA==,size_16,color_FFFFFF,t_70)
 
 ### 实验
 
@@ -57,15 +53,15 @@ typora-root-url: imgs
 
 ​		下表1，表2，表3分别展示了 Faster-RCNN 检测模型在不同数据测试集上的的检测性能，不同卷积主体结构的推理时间，以及 ResNet-18 和 ShuffleNet 为卷积主体的检测性能。
 
-![](/HnAXtxfznc.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20191128211125856.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjIzMDU1MA==,size_16,color_FFFFFF,t_70)
 
 > 表1 在不同数据测试集上 Faster-RCNN 检测模型的mAP。准确性是 mAP 在合成训练数据集上的相对改进。→表示微调，即 A→B 表示在 A 上训练并在 B 上微调。﻿
 
-![](/hABXajqmvi.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20191128211138507.png)
 
 > 表2 以各种卷积结构为主体的 Faster-RCNN 模型的推理时间。表中的数字为相对于 ResNet-50 的改进。
 
-![](/QuAbWqKPrS.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20191128211157316.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjIzMDU1MA==,size_16,color_FFFFFF,t_70)
 
 > 表3 使用 ResNet-18 和 Shuffle 结构的 Faster R-CNN 在 COCO-Text 数据集上评估结果。表格中的 mAP 是对 ResNet-18 的 3个RPN 宽高比的相对改进。
 
@@ -73,11 +69,11 @@ typora-root-url: imgs
 
 ​		下表4，表5分别展示了在不同数据集上模型的识别性能以及结合检测和识别系统检测到的词召回率下降的归一化幅度。
 
-![](/Cjzxu4BKeY.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20191128211216581.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjIzMDU1MA==,size_16,color_FFFFFF,t_70)
 
 > 表4不同数据集上模型的识别性能。越高的 accuracy 和越低的 edit distance 代表越好的结果。表中的数字是相对于在合成数据集上训练的 CHAR 模型的改进。
 
-![](/75NSa20x7F.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20191128211232893.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjIzMDU1MA==,size_16,color_FFFFFF,t_70)
 
 > 表5 检测和识别组合系统检测到词召回率下降的归一化幅度
 
