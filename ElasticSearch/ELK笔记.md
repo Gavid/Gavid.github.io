@@ -35,7 +35,7 @@ ELK是包含但不限于Elasticsearch（简称es）、Logstash、Kibana 三个�
 
 ## 2.1简介
 
-ELK是一个免费开源的日志分析架构技术栈总称，官网https://www.elastic.co/cn。包含三大基础组件，分别是Elasticsearch、Logstash、Kibana。但实际上ELK不仅仅适用于日志分析，它还可以支持其它任何数据搜索、分析和收集的场景，日志分析和收集只是更具有代表性。并非唯一性。下面是ELK架构：
+ELK是一个免费开源的日志分析架构技术栈总称，[官网](https://www.elastic.co/cn)。包含三大基础组件，分别是Elasticsearch、Logstash、Kibana。但实际上ELK不仅仅适用于日志分析，它还可以支持其它任何数据搜索、分析和收集的场景，日志分析和收集只是更具有代表性。并非唯一性。下面是ELK架构：
 
 ![1567691051440](./img/1567691051440.png)
 
