@@ -9,7 +9,7 @@
  	cd ~/.ssh       # 进入.ssh文件夹
  	```
  	![在这里插入图片描述](https://img-blog.csdnimg.cn/20190717110439302.png)
- * 生成ssh配置文件
+ * 生成ssh配置文件【 [此处可参阅GitHub官方文档](https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) 】
  	* 在 .ssh 文件夹下鼠标右键打开 Git Base Here 
  	* 输入命令：
  		```console
