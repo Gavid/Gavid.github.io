@@ -1,0 +1,1 @@
+有了 IP 地址，为什么还要用 MAC 地址？（https://www.zhihu.com/question/21546408/answers/updated）
