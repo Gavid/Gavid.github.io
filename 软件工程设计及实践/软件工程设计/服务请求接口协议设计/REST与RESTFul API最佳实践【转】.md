@@ -10,19 +10,19 @@ GitHub https://developer.github.com/v3/
 
 早期在移动端没有流行之前，Web API的概念还非常的弱，当时是网站盛行的年代，基本遵循着后台-前端的模型。后台产生数据，然后通过“模板”的形式将数据绑定到前端HTML代码里（渲染）。如下图所示：
 
-![图片描述](http://img.mukewang.com/58f9b3a10001054301800378.png)
+![图片描述](./img/REST与RESTFul API最佳实践【转】/58f9b3a10001054301800378.png)
 
 那么这里就有一个“域”的概念，JavaScript只能访问同一个域的服务器。比如我们将一个站点部署在A这个域名www.a.com下，那么这个站点的前端JavaScript只能访问域名为www.a.com的服务端。如果我们需要访问非A站点的其他“服务”怎么办？看看下图：
 
-![图片描述](http://img.mukewang.com/58f9b3ab0001345003840353.png)
+![图片描述](./img/REST与RESTFul API最佳实践【转】/58f9b3ab0001345003840353.png)
 
 在当时通用的做法是使用SOAP，Simple Object Access Protocol，简单对象协议，它使用XML作为数据的描述。我们看看使用SOAP的解决方案：
 
-![图片描述](http://img.mukewang.com/58f9b5af0001fabf04360424.png)
+![图片描述](./img/REST与RESTFul API最佳实践【转】/58f9b5af0001fabf04360424.png)
 
 JavaScript是不能直接访问SOAP服务的，需要首先访问自己的网站后台，再有网站后台访问SOAP服务。而且不同语言的网站后台，方位SOAP服务都需要有首先生成自己特定语言的“代理类”，Java有Java的、C#有C#的，这相当的繁琐与不好理解。这个时候我们的思考点来了，网站的后台对我来说意义是什么？ 我为什么不能直接访问服务？为什么我不能把网站里的业务代码也提取成服务，最后变成以下的理想情况：
 
-![图片描述](http://img.mukewang.com/58f9b5f50001189404480383.png)
+![图片描述](./img/REST与RESTFul API最佳实践【转】/58f9b5f50001189404480383.png)
 
 网站的后台几乎是个“壳子”，只负责网站本身的HTML页面、CSS、JavaScript文件等静态页面。而业务逻辑，交给服务来提供就好了。这样做的最大的好处是，业务变得独立了，可以被多个“网站”来共享访问了。有没有觉得挺熟悉？这个模式就是现在VUE、AngularJS等框架做的单页面应用程序。但是，在当时这种模式并不流行。我在很多年前就尝试这样的思维来构建Web，但是由于没有现在VUE、AngularJS等强大的SPA框架支持，效果并不好。但，我相信这种简洁的模式是Web的未来。我一向崇尚简洁，当年丢掉Flex、Silverlight、ASP.Net WebForm，独独选择JavaScript就是因为其他几个封装太多。
 
@@ -66,7 +66,7 @@ REST：REpresentational State Transfer，中译为“表属性状态传递”。
 3. HTTP状态码，在REST中都有特定的意义：200，201,202,204,400,401,403,500。比如401表示用户身份认证失败，403表示你验证身份通过了，但这个资源你不能操作。
 4. 如果出现错误，返回一个错误码。比如我通常是这么定义的：
 
-![图片描述](http://img.mukewang.com/58f9b3c700019d8c05750412.png)
+![图片描述](./img/REST与RESTFul API最佳实践【转】/58f9b3c700019d8c05750412.png)
 
 1. API必须有版本的概念，v1，v2，v3
 2. 使用Token令牌来做用户身份的校验与权限分级，而不是Cookie。
@@ -90,14 +90,4 @@ https://api.z.cn/v1/product/recent?page=3&size=20
 
 好了，关于RESTFul我们就介绍到这里。特别强调，接口设计是一个非常依赖于经验和重构的技术活儿，设计接口需要有一些艺术家的天赋（真实体会），你看GitHub的接口就非常的“美”。不要觉得很简单，真的比写代码还难。难道大家不觉得，有时候起名字真的是一件很难的事儿嘛？
 
-本文原创发布于慕课网 ，转载请注明出处，谢谢合作！
-
-
-作者： 7七月 
-链接：http://www.imooc.com/article/17650
-来源：慕课网
-本文原创发布于慕课网 ，转载请注明出处，谢谢合作！
-
- 
-
-出处：https://blog.csdn.net/u013063153/article/details/72811976
+出处：http://www.imooc.com/article/17650
