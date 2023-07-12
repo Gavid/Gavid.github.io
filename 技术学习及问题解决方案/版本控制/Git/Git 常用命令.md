@@ -15,6 +15,7 @@ git branch -d feature-xx #删除本地的feature分支
 git branch -a # 查看所有分支
 git branch --set-upstream-to=remotes/origin/feature-oldInterface-improve origin/feature-oldInterface-improve # 设置本地分支跟踪远程分支
 git remote add 仓库名 仓库地址 # 添加远程仓库
+git remote -v # 查看远程仓库地址及协议
 git remote rm 仓库名 # 删除远程仓库的关联，不会删除远程仓库本身，如果没有设置过仓库名默认是origin
 git stash save 暂存说明 #暂存本地更改，不commit，用于临时存储本地更改
 git stash # 暂存本地更改，不写暂存说明，git会生成暂存说明
@@ -59,5 +60,3 @@ Note : git  reset 是用来撤回代码的，本质就是修改当前的HEAD指
   git reset --soft的话，工作区（working tree ）和暂存区（index/stage）的内容都不会被修改，不过--soft后所带来的差异（就是目标commit  ID）以后，所带来的所有的修改，会被保存到暂存区，也就是相当于git add 后但是没commit前，并且--soft后，目标commit  ID后面的所有commit ID也会消失，其实是任意一种方式都会这样，因为reset操作，本来就是要撤销提交的，那么目标commit  ID后面的commit ID肯定是要被删除的，要不就不叫撤销。
   git  reset --mixed 的话，只会保留工作区（working  tree） 的修改，暂存区以及--mixed带来的差异，会被全部放到工作区中，也就是相当于没有git  add之前的状态。如果这时候不想保留修改内容，可以直接git  checkout  <file>即可。
 ```
-
-## 
