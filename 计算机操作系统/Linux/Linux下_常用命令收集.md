@@ -344,7 +344,7 @@ nc 10.252.152.150 9999 <my_ext_words.dic
 
 ```bash
 # 1.登录sftp服务器
-sftp user@sftp.58corp.com
+sftp user@sftp.xxx.com
 
 # 2.文件上传端
 put /path/filename(本地主机) /path/filename(远端主机)

@@ -43,28 +43,26 @@ git remote -v # 查看本地配置的链接方式
  * 生成ssh配置文件【 [此处可参阅GitHub官方文档](https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) 】（注意：是在.ssh 文件夹下）
 
 
-      * macOS 13版本以下可以使用以下方法进行配置
-        
-        ```bash
-        ssh-keygen -t rsa -C "[邮箱账号]" -b 4096
-        ```
-        
-      * macOS 13及以上版本需使用以下方法进行配置
-        
-        ```bash
-        ssh-keygen -t ed25519 -C "[邮箱账号]"
-        ```
-        
-      * 上述命令的执行次数由你要绑定几个代码仓库有关（eg: 要同时绑定Github和Gitee，则上述命令需执行两次），执行的时候可以自己指定生成文件的文件名（默认是id_rsa），然后填写密码（可以为空）：
-        
-        ```bash
-        Generating public/private rsa key pair.
-        Enter file in which to save the key (C:/Users/jiaha/.ssh): github_rsa
-        ```
-        
-        ![在这里插入图片描述](./img/Git clone ssh协议配置Igit&Github&Gitee等/20190717105307589.png)
+   * macOS 13版本以下可以使用以下方法进行配置
 
+     ```bash
+     ssh-keygen -t rsa -C "[邮箱账号]" -b 4096
+     ```
 
+   * macOS 13及以上版本需使用以下方法进行配置
+
+     ```bash
+     ssh-keygen -t ed25519 -C "[邮箱账号]"
+     ```
+
+ * 上述命令的执行次数由你要绑定几个代码仓库有关（eg: 要同时绑定Github和Gitee，则上述命令需执行两次），执行的时候可以自己指定生成文件的文件名（默认是id_rsa），然后填写密码（可以为空）：
+
+   ```bash
+   Generating public/private rsa key pair.
+   Enter file in which to save the key (C:/Users/jiaha/.ssh): github_rsa
+   ```
+
+   ![在这里插入图片描述](./img/Git clone ssh协议配置Igit&Github&Gitee等/20190717105307589.png)
 
   * Git 全局配置设置
 
@@ -80,8 +78,8 @@ git remote -v # 查看本地配置的链接方式
 ServerAliveInterval 60
 AddKeysToAgent yes
 
-# 58 igit
-Host igit.58corp.com
+# igit
+Host igit.xxx.com
     ControlMaster auto
     ControlPersist yes
     UseKeychain yes
@@ -111,8 +109,8 @@ Host gitee.com
 	ssh -T git@github.com
 	# 测试连接 Gitee 
 	ssh -T git@gitee.com
-	# 测试链接igit.58corp 返回会有你本地sshkey绑定的账号 用户
-	ssh -T git@igit.58corp.com 
+	# 测试链接igit.xxx 返回会有你本地sshkey绑定的账号 用户
+	ssh -T git@igit.xxx.com 
 	```
 * 如果出现如下结果，则说明你已经配置成功了。
 	![在这里插入图片描述](https://img-blog.csdnimg.cn/20190717135314964.png)
