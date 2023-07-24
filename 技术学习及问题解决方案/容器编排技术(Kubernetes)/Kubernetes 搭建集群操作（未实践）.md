@@ -6,9 +6,9 @@
 
 域名： 方案deprecated
 
-wcs.k8sv2-etcd.58dns.org 访问etcd 域名
+wcs.k8sv2-etcd.xxdns.org 访问etcd 域名
 
-wcs.k8sv2-apiserver.58dns.org 访问kube-apiserver 域名
+wcs.k8sv2-apiserver.xxdns.org 访问kube-apiserver 域名
 
 机器节点： 保留以前的方案
 
@@ -1183,9 +1183,9 @@ apiserver使用https端口，集群外部访问可以选择。启用Kubernetes
 
 "10.126.73.153",
 
-"wcs.k8sv2-etcd.58dns.org",
+"wcs.k8sv2-etcd.xxdns.org",
 
-"wcs.k8sv2-k8sapiserver.58dns.org"
+"wcs.k8sv2-k8sapiserver.xxdns.org"
 
 ],
 
@@ -2398,7 +2398,7 @@ mkdir -p \~/k8s/flannel
 >   \- name: install-cni
 
 >   image:
->   wcs.online.registry.58corp.com:8000/wcs-kube-system/flannel:v0.9.1-amd64
+>   wcs.online.registry.xxx.com:8000/wcs-kube-system/flannel:v0.9.1-amd64
 
 >   command: [ "/bin/sh", "-c", "set -e -x; cp -f
 >   /etc/kube-flannel/cni-conf.json /etc/cni/net.d/10-flannel.conf; while true;

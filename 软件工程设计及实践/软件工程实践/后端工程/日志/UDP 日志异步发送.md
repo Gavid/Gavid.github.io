@@ -67,9 +67,7 @@
 * UdpServiceClient
 
   ```java
-  package com.bj58.search.wcs.utils.udp;
-  
-  import com.bj58.search.wcs.utils.exception.UdpSendException;
+  import exception.UdpSendException;
   import lombok.AccessLevel;
   import lombok.EqualsAndHashCode;
   import lombok.Getter;
@@ -301,13 +299,10 @@
       }
   }
   ```
-
+  
 * AsyncUdpSendUtil
 
   ```java
-  package com.bj58.search.wcs.utils.udp;
-  
-  import com.bj58.search.wcs.utils.exception.UdpSendException;
   import lombok.AccessLevel;
   import lombok.NoArgsConstructor;
   import lombok.extern.slf4j.Slf4j;

@@ -26,7 +26,7 @@ mvn clean package k8s:build -Djkube.docker.username=jolokia -Djkube.docker.passw
 ```XML
        <properties>
            <java.version>1.8</java.version>
-           <jkube.docker.registry>http://harbor.58corp.com/</jkube.docker.registry>
+           <jkube.docker.registry>http://harbor.xxx.com/</jkube.docker.registry>
        </properties>
    
        <build>
@@ -64,9 +64,9 @@ mvn clean package k8s:build -Djkube.docker.username=jolokia -Djkube.docker.passw
                        <images>
                            <!-- A single's image configuration -->
                            <image>
-                               <name>harbor.58corp.com/wcs/difftool:v1.0</name>
+                               <name>harbor.xxx.com/wcs/difftool:v1.0</name>
                                <alias>difftool</alias>
-                               <registry>http://harbor.58corp.com/</registry>
+                               <registry>http://harbor.xxx.com/</registry>
                                <build>
                                    <dockerFile>${project.basedir}/src/main/docker/Dockerfile</dockerFile>
                                </build>
@@ -140,7 +140,7 @@ spec:
     spec:
       containers:
         - name: difftool-k8s
-          image: harbor.58corp.com/wcs/difftool:v1.0
+          image: harbor.xxx.com/wcs/difftool:v1.0
           imagePullPolicy: Always
           command: ["java","-jar","postingdiff-1.0-SNAPSHOT.jar"]
           ports:

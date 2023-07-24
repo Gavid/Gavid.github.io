@@ -2,10 +2,10 @@
 
 ```bash
 # 登录/登出
-# 线上harbar: http://harboroffline.58v5.cn/
-# 线下harbar: http://harbor.58corp.com/
-docker logout http://harbor.58corp.com/
-docker login http://harbor.58corp.com/
+# 线上harbar: http://harboroffline.xxv5.cn/
+# 线下harbar: http://harbor.xxcorp.com/
+docker logout http://harbor.xxcorp.com/
+docker login http://harbor.xxcorp.com/
 
 docker images | grep xxx # 查看镜像
 docker pull xxx # 拉取xxx最新镜像
